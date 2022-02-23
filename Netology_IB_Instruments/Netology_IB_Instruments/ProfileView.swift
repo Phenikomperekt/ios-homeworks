@@ -18,14 +18,29 @@ class ProfileView: UIView {
     @IBOutlet weak var userResumeLivePlaceUILabel: UILabel!
 
     @IBOutlet weak var userResumeSummaryUITextView: UITextView!
-    
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
+    override init(frame: CGRect) {
+            super.init(frame: frame)
+            self.setupView()
+        }
+
+        required init?(coder: NSCoder) {
+           super.init(coder: coder)
+            self.setupView()
+        }
+
+        private func setupView() {
+            let view = self.loadViewFromXib()
+            view.frame = self.bounds
+            view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            self.addSubview(view)
+        }
+
+        private func loadViewFromXib() -> UIView {
+            guard let view = Bundle.main.loadNibNamed("ProfileView", owner: nil, options: nil)?.first as? UIView else { return UIView() }
+
+            return view
+        }
+   
 
 }

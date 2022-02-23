@@ -12,7 +12,6 @@
 		A260055027C2521800FD05B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A260054F27C2521800FD05B0 /* ViewController.swift */; };
 		A260055327C2521800FD05B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A260055127C2521800FD05B0 /* Main.storyboard */; };
 		A260055527C2521A00FD05B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A260055427C2521A00FD05B0 /* Assets.xcassets */; };
-		A260055827C2521A00FD05B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A260055627C2521A00FD05B0 /* LaunchScreen.storyboard */; };
 		A260056027C327D200FD05B0 /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A260055F27C327D200FD05B0 /* ProfileView.xib */; };
 		A260056227C3308200FD05B0 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A260056127C3308200FD05B0 /* ProfileView.swift */; };
 		A260056427C3337900FD05B0 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A260056327C3337900FD05B0 /* Profile.storyboard */; };
@@ -26,7 +25,6 @@
 		A260054F27C2521800FD05B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A260055227C2521800FD05B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A260055427C2521A00FD05B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A260055727C2521A00FD05B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A260055927C2521A00FD05B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A260055F27C327D200FD05B0 /* ProfileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
 		A260056127C3308200FD05B0 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -73,7 +71,6 @@
 				A260056527C333AC00FD05B0 /* ProfileViewController.swift */,
 				A260055127C2521800FD05B0 /* Main.storyboard */,
 				A260055427C2521A00FD05B0 /* Assets.xcassets */,
-				A260055627C2521A00FD05B0 /* LaunchScreen.storyboard */,
 				A260055927C2521A00FD05B0 /* Info.plist */,
 			);
 			path = Netology_IB_Instruments;
@@ -138,7 +135,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A260056027C327D200FD05B0 /* ProfileView.xib in Resources */,
-				A260055827C2521A00FD05B0 /* LaunchScreen.storyboard in Resources */,
 				A260056427C3337900FD05B0 /* Profile.storyboard in Resources */,
 				A260055527C2521A00FD05B0 /* Assets.xcassets in Resources */,
 				A260055327C2521800FD05B0 /* Main.storyboard in Resources */,
@@ -169,14 +165,6 @@
 				A260055227C2521800FD05B0 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		A260055627C2521A00FD05B0 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A260055727C2521A00FD05B0 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
