@@ -68,7 +68,7 @@
                 <outlet property="userResumeSummaryUITextView" destination="TYh-2j-Oa5" id="OJF-Zw-xPn"/>
                 <outlet property="userResumeUILabel" destination="FLO-19-ojZ" id="mu8-G8-3TT"/>
             </connections>
-            <point key="canvasLocation" x="137.68115942028987" y="153.34821428571428"/>
+            <point key="canvasLocation" x="341" y="150"/>
         </view>
     </objects>
     <resources>

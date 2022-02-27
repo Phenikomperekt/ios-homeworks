@@ -31,13 +31,14 @@ class ProfileView: UIView {
 
         private func setupView() {
             let view = self.loadViewFromXib()
+            self.addSubview(view)
             view.frame = self.bounds
             view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-            self.addSubview(view)
+
         }
 
         private func loadViewFromXib() -> UIView {
-            guard let view = Bundle.main.loadNibNamed("ProfileView", owner: nil, options: nil)?.first as? UIView else { return UIView() }
+            guard let view = Bundle.main.loadNibNamed("ProfileView", owner: self, options: nil)?.first as? UIView else { return UIView() }
 
             return view
         }

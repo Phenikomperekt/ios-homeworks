@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		A260054C27C2521800FD05B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A260054B27C2521800FD05B0 /* AppDelegate.swift */; };
 		A260054E27C2521800FD05B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A260054D27C2521800FD05B0 /* SceneDelegate.swift */; };
-		A260055027C2521800FD05B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A260054F27C2521800FD05B0 /* ViewController.swift */; };
-		A260055327C2521800FD05B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A260055127C2521800FD05B0 /* Main.storyboard */; };
 		A260055527C2521A00FD05B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A260055427C2521A00FD05B0 /* Assets.xcassets */; };
 		A260056027C327D200FD05B0 /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A260055F27C327D200FD05B0 /* ProfileView.xib */; };
 		A260056227C3308200FD05B0 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A260056127C3308200FD05B0 /* ProfileView.swift */; };
@@ -22,8 +20,6 @@
 		A260054827C2521800FD05B0 /* Netology_IB_Instruments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Netology_IB_Instruments.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A260054B27C2521800FD05B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A260054D27C2521800FD05B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A260054F27C2521800FD05B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A260055227C2521800FD05B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A260055427C2521A00FD05B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A260055927C2521A00FD05B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A260055F27C327D200FD05B0 /* ProfileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
@@ -64,13 +60,11 @@
 			children = (
 				A260054B27C2521800FD05B0 /* AppDelegate.swift */,
 				A260054D27C2521800FD05B0 /* SceneDelegate.swift */,
-				A260054F27C2521800FD05B0 /* ViewController.swift */,
+				A260055427C2521A00FD05B0 /* Assets.xcassets */,
 				A260055F27C327D200FD05B0 /* ProfileView.xib */,
 				A260056127C3308200FD05B0 /* ProfileView.swift */,
 				A260056327C3337900FD05B0 /* Profile.storyboard */,
 				A260056527C333AC00FD05B0 /* ProfileViewController.swift */,
-				A260055127C2521800FD05B0 /* Main.storyboard */,
-				A260055427C2521A00FD05B0 /* Assets.xcassets */,
 				A260055927C2521A00FD05B0 /* Info.plist */,
 			);
 			path = Netology_IB_Instruments;
@@ -137,7 +131,6 @@
 				A260056027C327D200FD05B0 /* ProfileView.xib in Resources */,
 				A260056427C3337900FD05B0 /* Profile.storyboard in Resources */,
 				A260055527C2521A00FD05B0 /* Assets.xcassets in Resources */,
-				A260055327C2521800FD05B0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,7 +142,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A260056227C3308200FD05B0 /* ProfileView.swift in Sources */,
-				A260055027C2521800FD05B0 /* ViewController.swift in Sources */,
 				A260056627C333AC00FD05B0 /* ProfileViewController.swift in Sources */,
 				A260054C27C2521800FD05B0 /* AppDelegate.swift in Sources */,
 				A260054E27C2521800FD05B0 /* SceneDelegate.swift in Sources */,
@@ -157,17 +149,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		A260055127C2521800FD05B0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A260055227C2521800FD05B0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		A260055A27C2521A00FD05B0 /* Debug */ = {
