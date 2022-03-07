@@ -35,9 +35,14 @@ class FeedViewController: UIViewController {
 
     }
 
+
+
     @objc private func didTapButton () {
         let vc = PostViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
+
+        PostViewController.post.title = "Title of Post"
+        navigationController?.pushViewController(vc, animated: true)
+
     }
 
 

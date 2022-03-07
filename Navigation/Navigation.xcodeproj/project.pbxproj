@@ -15,6 +15,8 @@
 		A2E0CF4D27CFA9EE00543B3F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0CF4C27CFA9EE00543B3F /* ProfileViewController.swift */; };
 		A2E0CF4F27D0D93C00543B3F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0CF4E27D0D93C00543B3F /* TabBarController.swift */; };
 		A2E0CF5127D0F12000543B3F /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0CF5027D0F12000543B3F /* PostViewController.swift */; };
+		A2E0CF5327D10E8600543B3F /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0CF5227D10E8600543B3F /* Post.swift */; };
+		A2E0CF5527D63DF900543B3F /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0CF5427D63DF900543B3F /* InfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		A2E0CF4C27CFA9EE00543B3F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A2E0CF4E27D0D93C00543B3F /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		A2E0CF5027D0F12000543B3F /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		A2E0CF5227D10E8600543B3F /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		A2E0CF5427D63DF900543B3F /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,9 +67,11 @@
 				A2E0CF3627CFA14800543B3F /* AppDelegate.swift */,
 				A2E0CF3827CFA14800543B3F /* SceneDelegate.swift */,
 				A2E0CF4E27D0D93C00543B3F /* TabBarController.swift */,
-				A2E0CF4A27CFA9D700543B3F /* FeedViewController.swift */,
 				A2E0CF4C27CFA9EE00543B3F /* ProfileViewController.swift */,
+				A2E0CF4A27CFA9D700543B3F /* FeedViewController.swift */,
 				A2E0CF5027D0F12000543B3F /* PostViewController.swift */,
+				A2E0CF5427D63DF900543B3F /* InfoViewController.swift */,
+				A2E0CF5227D10E8600543B3F /* Post.swift */,
 				A2E0CF3F27CFA14A00543B3F /* Assets.xcassets */,
 				A2E0CF4127CFA14A00543B3F /* LaunchScreen.storyboard */,
 				A2E0CF4427CFA14A00543B3F /* Info.plist */,
@@ -148,6 +154,8 @@
 				A2E0CF4B27CFA9D700543B3F /* FeedViewController.swift in Sources */,
 				A2E0CF4D27CFA9EE00543B3F /* ProfileViewController.swift in Sources */,
 				A2E0CF4F27D0D93C00543B3F /* TabBarController.swift in Sources */,
+				A2E0CF5327D10E8600543B3F /* Post.swift in Sources */,
+				A2E0CF5527D63DF900543B3F /* InfoViewController.swift in Sources */,
 				A2E0CF3927CFA14800543B3F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
