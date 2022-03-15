@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A28900EF27DA0802002586E4 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28900EE27DA0801002586E4 /* ProfileHeaderView.swift */; };
 		A2E0CF3727CFA14800543B3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0CF3627CFA14800543B3F /* AppDelegate.swift */; };
 		A2E0CF3927CFA14800543B3F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0CF3827CFA14800543B3F /* SceneDelegate.swift */; };
 		A2E0CF4027CFA14A00543B3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2E0CF3F27CFA14A00543B3F /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A28900EE27DA0801002586E4 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		A2E0CF3327CFA14800543B3F /* Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2E0CF3627CFA14800543B3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2E0CF3827CFA14800543B3F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,7 +30,7 @@
 		A2E0CF4227CFA14A00543B3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2E0CF4427CFA14A00543B3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2E0CF4A27CFA9D700543B3F /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
-		A2E0CF4C27CFA9EE00543B3F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		A2E0CF4C27CFA9EE00543B3F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Navigation/ProfileViewController.swift; sourceTree = SOURCE_ROOT; };
 		A2E0CF4E27D0D93C00543B3F /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		A2E0CF5027D0F12000543B3F /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		A2E0CF5227D10E8600543B3F /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -47,6 +49,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A28900ED27DA0798002586E4 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				A2E0CF4C27CFA9EE00543B3F /* ProfileViewController.swift */,
+				A28900EE27DA0801002586E4 /* ProfileHeaderView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		A2E0CF2A27CFA14800543B3F = {
 			isa = PBXGroup;
 			children = (
@@ -69,7 +80,6 @@
 				A2E0CF3627CFA14800543B3F /* AppDelegate.swift */,
 				A2E0CF3827CFA14800543B3F /* SceneDelegate.swift */,
 				A2E0CF4E27D0D93C00543B3F /* TabBarController.swift */,
-				A2E0CF4C27CFA9EE00543B3F /* ProfileViewController.swift */,
 				A2E0CF4A27CFA9D700543B3F /* FeedViewController.swift */,
 				A2E0CF5027D0F12000543B3F /* PostViewController.swift */,
 				A2E0CF5427D63DF900543B3F /* InfoViewController.swift */,
@@ -77,6 +87,7 @@
 				A2E0CF5227D10E8600543B3F /* Post.swift */,
 				A2E0CF3F27CFA14A00543B3F /* Assets.xcassets */,
 				A2E0CF4127CFA14A00543B3F /* LaunchScreen.storyboard */,
+				A28900ED27DA0798002586E4 /* Profile */,
 				A2E0CF4427CFA14A00543B3F /* Info.plist */,
 			);
 			path = Navigation;
@@ -159,6 +170,7 @@
 				A2E0CF4D27CFA9EE00543B3F /* ProfileViewController.swift in Sources */,
 				A2E0CF4F27D0D93C00543B3F /* TabBarController.swift in Sources */,
 				A2E0CF5327D10E8600543B3F /* Post.swift in Sources */,
+				A28900EF27DA0802002586E4 /* ProfileHeaderView.swift in Sources */,
 				A2E0CF5527D63DF900543B3F /* InfoViewController.swift in Sources */,
 				A2E0CF3927CFA14800543B3F /* SceneDelegate.swift in Sources */,
 			);
