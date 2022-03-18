@@ -19,6 +19,7 @@
 		A2E0CF5327D10E8600543B3F /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0CF5227D10E8600543B3F /* Post.swift */; };
 		A2E0CF5527D63DF900543B3F /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0CF5427D63DF900543B3F /* InfoViewController.swift */; };
 		A2E0CF5727D649DE00543B3F /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0CF5627D649DE00543B3F /* AlertController.swift */; };
+		A2EA008127E49C36006A1193 /* FeedStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EA008027E49C36006A1193 /* FeedStackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		A2E0CF5227D10E8600543B3F /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		A2E0CF5427D63DF900543B3F /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		A2E0CF5627D649DE00543B3F /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
+		A2EA008027E49C36006A1193 /* FeedStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				A2E0CF3827CFA14800543B3F /* SceneDelegate.swift */,
 				A2E0CF4E27D0D93C00543B3F /* TabBarController.swift */,
 				A2E0CF4A27CFA9D700543B3F /* FeedViewController.swift */,
+				A2EA008027E49C36006A1193 /* FeedStackView.swift */,
 				A2E0CF5027D0F12000543B3F /* PostViewController.swift */,
 				A2E0CF5427D63DF900543B3F /* InfoViewController.swift */,
 				A2E0CF5627D649DE00543B3F /* AlertController.swift */,
@@ -170,6 +173,7 @@
 				A2E0CF4D27CFA9EE00543B3F /* ProfileViewController.swift in Sources */,
 				A2E0CF4F27D0D93C00543B3F /* TabBarController.swift in Sources */,
 				A2E0CF5327D10E8600543B3F /* Post.swift in Sources */,
+				A2EA008127E49C36006A1193 /* FeedStackView.swift in Sources */,
 				A28900EF27DA0802002586E4 /* ProfileHeaderView.swift in Sources */,
 				A2E0CF5527D63DF900543B3F /* InfoViewController.swift in Sources */,
 				A2E0CF3927CFA14800543B3F /* SceneDelegate.swift in Sources */,

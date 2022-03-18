@@ -33,10 +33,9 @@ class ProfileHeaderView: UIView {
 
         self.addSubview(showButton)
         let showButtonTopAncor = showButton.topAnchor.constraint(equalTo: avatar.bottomAnchor, constant: 16)
-        let showButtonLeadingAnchor = showButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16)
-        let showButtonTrailingAnchor = showButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16)
-        let showButtonHeightAnchor = showButton.heightAnchor.constraint(equalToConstant: 50)
-
+        let showButtonLeadingAnchor = showButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0)
+        let showButtonTrailingAnchor = showButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0)
+        let showButtonHeightAnchor = showButton.bottomAnchor.constraint(equalTo: self.layoutMarginsGuide.bottomAnchor)
         self.addSubview(nameLabel)
         let nameLabelWidthAnchor = nameLabel.widthAnchor.constraint(equalToConstant: 200)
         let nameLabelLeftAnchor = nameLabel.leftAnchor.constraint(equalTo: avatar.rightAnchor, constant: 16)
@@ -131,13 +130,9 @@ class ProfileHeaderView: UIView {
     }
 
 
-    private func printStatus() {
-        print(statusLabel.text!) // Отладочная информация, поэтому можем себе позволить насильно раскрывать опциональный тип.
-    }
-
     private func statusTextChanged (statusTemp: String?){
         if let statusTextTemp = statusTemp {
-        statusText = statusTextTemp  // Я знаю, что дополнительная переменная не нужна, но в задании она есть. )
+        statusText = statusTextTemp 
         self.statusLabel.text = statusText
         }
     }
@@ -146,7 +141,7 @@ class ProfileHeaderView: UIView {
         if !statusTag {
             theStatusTextField()
             showButton.setTitle("Save status", for: .normal)
-            printStatus()
+
             statusTag.toggle()
 
         } else if statusTag {
