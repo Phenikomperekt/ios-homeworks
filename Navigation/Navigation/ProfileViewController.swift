@@ -14,8 +14,6 @@ class ProfileViewController: UIViewController {
     private lazy var profileHeaderView: ProfileHeaderView = {
         let profileHeaderView = ProfileHeaderView()
 
-
-
         return profileHeaderView
     }()
 
@@ -24,14 +22,19 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
 
         self.view.addSubview(profileHeaderView)
+
+        profileHeaderView.translatesAutoresizingMaskIntoConstraints = false
+        let topProfileView = profileHeaderView.topAnchor.constraint(equalTo: self.view.layoutMarginsGuide.topAnchor)
+        let leftProfileView = profileHeaderView.leftAnchor.constraint(equalTo: self.view.leftAnchor)
+        let rightProfileView = profileHeaderView.rightAnchor.constraint(equalTo: self.view.rightAnchor)
+        let heightProfileView = profileHeaderView.heightAnchor.constraint(equalToConstant: 220)
+        NSLayoutConstraint.activate([topProfileView, leftProfileView,
+                                     rightProfileView, heightProfileView])
+
         profileHeaderView.addSubViews()
 
+
+
     }
-
-
-    override func viewWillLayoutSubviews() {
-        profileHeaderView.frame.size = self.view.frame.size
-    }
-
 
 }
