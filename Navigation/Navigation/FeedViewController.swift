@@ -49,7 +49,7 @@ class FeedViewController: UIViewController {
           return postButton
       }()
 
-    // Кнопки просто скопировал, потому что очевидно, что решение временное.
+    
 
     private lazy var postButton2: UIButton = {
           let postButton = UIButton()
