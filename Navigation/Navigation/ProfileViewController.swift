@@ -9,8 +9,6 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
-
-
     private lazy var profileHeaderView: ProfileHeaderView = {
         let profileHeaderView = ProfileHeaderView()
 

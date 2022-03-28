@@ -21,7 +21,6 @@
 		A2E0CF5727D649DE00543B3F /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0CF5627D649DE00543B3F /* AlertController.swift */; };
 		A2EA008127E49C36006A1193 /* FeedStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EA008027E49C36006A1193 /* FeedStackView.swift */; };
 		A2EA008327EB22B6006A1193 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EA008227EB22B6006A1193 /* LogInViewController.swift */; };
-		A2EA008527EB40E5006A1193 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EA008427EB40E5006A1193 /* LogInView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +40,6 @@
 		A2E0CF5627D649DE00543B3F /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		A2EA008027E49C36006A1193 /* FeedStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStackView.swift; sourceTree = "<group>"; };
 		A2EA008227EB22B6006A1193 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
-		A2EA008427EB40E5006A1193 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +59,6 @@
 				A2E0CF4C27CFA9EE00543B3F /* ProfileViewController.swift */,
 				A28900EE27DA0801002586E4 /* ProfileHeaderView.swift */,
 				A2EA008227EB22B6006A1193 /* LogInViewController.swift */,
-				A2EA008427EB40E5006A1193 /* LogInView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -184,7 +181,6 @@
 				A28900EF27DA0802002586E4 /* ProfileHeaderView.swift in Sources */,
 				A2E0CF5527D63DF900543B3F /* InfoViewController.swift in Sources */,
 				A2E0CF3927CFA14800543B3F /* SceneDelegate.swift in Sources */,
-				A2EA008527EB40E5006A1193 /* LogInView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
