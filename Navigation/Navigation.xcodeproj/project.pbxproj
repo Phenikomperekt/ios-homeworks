@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A28900EF27DA0802002586E4 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28900EE27DA0801002586E4 /* ProfileHeaderView.swift */; };
+		A28900EF27DA0802002586E4 /* ProfileTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28900EE27DA0801002586E4 /* ProfileTableHeaderView.swift */; };
 		A2E0CF3727CFA14800543B3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0CF3627CFA14800543B3F /* AppDelegate.swift */; };
 		A2E0CF3927CFA14800543B3F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0CF3827CFA14800543B3F /* SceneDelegate.swift */; };
 		A2E0CF4027CFA14A00543B3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2E0CF3F27CFA14A00543B3F /* Assets.xcassets */; };
@@ -24,7 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A28900EE27DA0801002586E4 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		A28900EE27DA0801002586E4 /* ProfileTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableHeaderView.swift; sourceTree = "<group>"; };
 		A2E0CF3327CFA14800543B3F /* Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2E0CF3627CFA14800543B3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2E0CF3827CFA14800543B3F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				A2E0CF4C27CFA9EE00543B3F /* ProfileViewController.swift */,
-				A28900EE27DA0801002586E4 /* ProfileHeaderView.swift */,
+				A28900EE27DA0801002586E4 /* ProfileTableHeaderView.swift */,
 				A2EA008227EB22B6006A1193 /* LogInViewController.swift */,
 			);
 			path = Profile;
@@ -178,7 +178,7 @@
 				A2E0CF5327D10E8600543B3F /* Post.swift in Sources */,
 				A2EA008127E49C36006A1193 /* FeedStackView.swift in Sources */,
 				A2EA008327EB22B6006A1193 /* LogInViewController.swift in Sources */,
-				A28900EF27DA0802002586E4 /* ProfileHeaderView.swift in Sources */,
+				A28900EF27DA0802002586E4 /* ProfileTableHeaderView.swift in Sources */,
 				A2E0CF5527D63DF900543B3F /* InfoViewController.swift in Sources */,
 				A2E0CF3927CFA14800543B3F /* SceneDelegate.swift in Sources */,
 			);

@@ -11,8 +11,6 @@ class LogInViewController: UIViewController {
 
     private lazy var logInScrollView: UIScrollView = {
         let logInScrollView = UIScrollView()
-
-    
         logInScrollView.translatesAutoresizingMaskIntoConstraints = false
         return logInScrollView
     }()
@@ -41,6 +39,8 @@ class LogInViewController: UIViewController {
         setupConstraints()
         addLogInElements()
 
+
+
     }
 
     override func viewDidDisappear(_ animated: Bool) {
@@ -56,8 +56,8 @@ class LogInViewController: UIViewController {
         let leftScrollView = logInScrollView.leftAnchor.constraint(equalTo: self.view.leftAnchor)
         let rightScrollView = logInScrollView.rightAnchor.constraint(equalTo: self.view.rightAnchor)
 
-        let topLogInView = logInView.topAnchor.constraint(equalTo: self.logInScrollView.layoutMarginsGuide.topAnchor)
-        let bottomLogInView = logInView.bottomAnchor.constraint(equalTo: self.logInScrollView.layoutMarginsGuide.bottomAnchor)
+        let topLogInView = logInView.topAnchor.constraint(equalTo: self.logInScrollView.topAnchor)
+        let bottomLogInView = logInView.bottomAnchor.constraint(equalTo: self.logInScrollView.bottomAnchor)
         let leftLogInView = logInView.leftAnchor.constraint(equalTo: self.logInScrollView.layoutMarginsGuide.leftAnchor)
         let rightLogInView = logInView.rightAnchor.constraint(equalTo: self.logInScrollView.layoutMarginsGuide.rightAnchor)
 
@@ -70,15 +70,22 @@ class LogInViewController: UIViewController {
     @objc private func kbWillShow(notification: NSNotification) {
         if let kbdSize =
             (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-            logInScrollView.contentInset.bottom = kbdSize.height
-            logInScrollView.verticalScrollIndicatorInsets = UIEdgeInsets(top: 0, left: 0, bottom: kbdSize.height, right: 0)
+            print ("Key is ON from: ", logInScrollView.contentInset.bottom)
+            self.logInScrollView.contentInset.bottom = kbdSize.height + 20
+            self.logInScrollView.verticalScrollIndicatorInsets =
+                                        UIEdgeInsets(top: 0, left: 0, bottom: kbdSize.height, right: 0)
+            print ("Key height is ", logInScrollView.contentInset.bottom)
+            UIView.animate(withDuration: 0.3, animations: {
+            })
         }
 
     }
 
+
     @objc func kbWillHide() {
         logInScrollView.contentInset.bottom = .zero
         logInScrollView.verticalScrollIndicatorInsets = .zero
+        print ("Key height off is ", logInScrollView.contentInset.bottom)
     }
 
     func addLogInElements() {
