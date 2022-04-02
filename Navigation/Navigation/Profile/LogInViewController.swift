@@ -75,8 +75,7 @@ class LogInViewController: UIViewController {
             self.logInScrollView.verticalScrollIndicatorInsets =
                                         UIEdgeInsets(top: 0, left: 0, bottom: kbdSize.height, right: 0)
             print ("Key height is ", logInScrollView.contentInset.bottom)
-            UIView.animate(withDuration: 0.3, animations: {
-            })
+           
         }
 
     }
