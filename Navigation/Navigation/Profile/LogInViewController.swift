@@ -213,7 +213,7 @@ class LogInViewController: UIViewController {
 
             let profileController = ProfileViewController()
             present(profileController, animated: true, completion: nil)
-//            self.navigationController?.pushViewController(profileController, animated: true)
+//            navigationController?.pushViewController(profileController, animated: true)
             //Почему тут не работает пуш?
 
         if let tabBarController = logInView.window!.rootViewController as? UITabBarController {
