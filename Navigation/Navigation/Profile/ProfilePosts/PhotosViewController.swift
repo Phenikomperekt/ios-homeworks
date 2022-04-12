@@ -59,6 +59,17 @@ class PhotosViewController: UIViewController {
 
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = false
+
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.tabBarController?.tabBar.isHidden = true
+    }
+
     private func itemSize(for width: CGFloat, with spacing: CGFloat) -> CGSize {
         let neededWidth = width - 2 * spacing
         let itemWidth = floor(neededWidth / photosInRow)

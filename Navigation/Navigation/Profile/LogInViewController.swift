@@ -24,6 +24,7 @@ class LogInViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.tabBarController?.tabBar.isHidden = true
+
         let noteCenter = NotificationCenter.default
         noteCenter.addObserver(self, selector: #selector(kbWillShow),
                                name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -61,9 +62,12 @@ class LogInViewController: UIViewController {
         let leftLogInView = logInView.leftAnchor.constraint(equalTo: self.logInScrollView.layoutMarginsGuide.leftAnchor)
         let rightLogInView = logInView.rightAnchor.constraint(equalTo: self.logInScrollView.layoutMarginsGuide.rightAnchor)
 
+        let widthLogInView = logInView.widthAnchor.constraint(equalTo: self.logInScrollView.widthAnchor)
+        let heightLogInView = logInView.heightAnchor.constraint(equalTo: self.view.heightAnchor)
+
         NSLayoutConstraint.activate([
                                      topScrollView, bottomScrollView, leftScrollView, rightScrollView,
-                                     topLogInView, bottomLogInView, rightLogInView, leftLogInView
+                                     topLogInView, bottomLogInView, rightLogInView, leftLogInView, widthLogInView, heightLogInView
                                     ])
     }
 
@@ -212,9 +216,7 @@ class LogInViewController: UIViewController {
         } else {
 
             let profileController = ProfileViewController()
-//            present(profileController, animated: true, completion: nil)
             navigationController?.pushViewController(profileController, animated: true)
-            //Почему тут не работает пуш?
 
         if let tabBarController = logInView.window!.rootViewController as? UITabBarController {
             tabBarController.tabBar.isHidden = false
