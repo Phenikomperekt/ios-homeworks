@@ -51,7 +51,7 @@ class TabBarController: UITabBarController {
                 return UINavigationController(rootViewController: FeedViewController())
             case .profile:
 
-                return LogInViewController()
+                return UINavigationController(rootViewController: LogInViewController())
             }
         })
 

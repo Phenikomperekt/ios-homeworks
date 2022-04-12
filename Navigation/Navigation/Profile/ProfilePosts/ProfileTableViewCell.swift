@@ -11,6 +11,7 @@ class ProfileTableViewCell: UITableViewCell {
 
     private var statusText: String = ""
     private var statusTag: Bool = false
+    var actionBlock: (() -> Void)? = nil
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -52,7 +53,7 @@ class ProfileTableViewCell: UITableViewCell {
                                      statusLabelWidthAnchor, statusLabelLeftAnchor, statusLabelBottomAnchor])
     }
 
-    private lazy var showButton: UIButton = {
+    lazy var showButton: UIButton = {
         let showButton = UIButton()
         showButton.setTitle("New status", for: .normal)
         showButton.setTitleColor(.white, for: .normal)
@@ -137,7 +138,11 @@ class ProfileTableViewCell: UITableViewCell {
         }
     }
 
-    @objc private func TapShowButton () {
+    @objc func TapShowButton(sender: UIButton) {
+        actionBlock?()
+    }
+
+    func mustShowButton () {
         if !statusTag {
             theStatusTextField()
             showButton.setTitle("Save status", for: .normal)

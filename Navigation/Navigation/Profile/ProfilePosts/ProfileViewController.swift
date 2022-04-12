@@ -103,6 +103,9 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "DefaultCell", for: indexPath)
                 return cell
             }
+            topCell.actionBlock = {
+                topCell.mustShowButton()
+            }
             return topCell
         }
 
