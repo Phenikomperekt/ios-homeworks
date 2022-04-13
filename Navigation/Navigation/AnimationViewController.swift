@@ -119,8 +119,19 @@ final class AnimationViewController: UIViewController {
     private func setupGesture() {
         self.tapGestureRecognizer.addTarget(self, action: #selector(self.handleTapGesture(_:)))
         self.avatarView.addGestureRecognizer(self.tapGestureRecognizer)
-
     }
+
+    private func animateCloseButton(_ whereIs: Bool) {
+        if whereIs {
+            UIView.animate(withDuration: 0.3) { [self] in
+                self.closeButton.alpha = self.isExpanded ? 1 : 0
+                self.view.layoutIfNeeded()
+            } completion: { _ in
+                self.closeButton.isHidden = !self.isExpanded
+            }
+        } else { return }
+    }
+
     private func animationMagic(_ interactionEnable: Bool) {
         self.isExpanded.toggle()
 
@@ -128,6 +139,7 @@ final class AnimationViewController: UIViewController {
         self.heightConstraint?.constant = self.isExpanded ? screenWidth : initialSize
         self.centerXConstraint?.constant = self.isExpanded ? self.centerXZoomConstraint!.constant : self.centerXInitialConstraint!.constant
         self.centerYConstraint?.constant = self.isExpanded ? self.centerYZoomConstraint!.constant : self.centerYInitialConstraint!.constant
+        self.animateCloseButton(interactionEnable)
 
         if self.isExpanded {
             self.hiddenView.isHidden = false
@@ -136,14 +148,17 @@ final class AnimationViewController: UIViewController {
 
         UIView.animate(withDuration: 0.5) { [self] in
             self.hiddenView.alpha = self.isExpanded ? 1 : 0
-            self.closeButton.alpha = self.isExpanded ? 1 : 0
+
+//            self.closeButton.alpha = self.isExpanded ? 1 : 0
             self.avatarView.layer.cornerRadius = self.isExpanded ? 0 : self.initialSize/2
 
             self.view.layoutIfNeeded()
         } completion: { _ in
             self.hiddenView.isHidden = !self.isExpanded
-            self.closeButton.isHidden = !self.isExpanded
+
+//            self.closeButton.isHidden = !self.isExpanded
             self.avatarView.isUserInteractionEnabled = interactionEnable
+            self.animateCloseButton(!interactionEnable)
         }
     }
 
