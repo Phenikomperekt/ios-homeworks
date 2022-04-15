@@ -7,6 +7,8 @@
 
 import UIKit
 
+
+
 class TabBarController: UITabBarController {
 
     private enum TabBarItem {
@@ -37,17 +39,19 @@ class TabBarController: UITabBarController {
         super.viewDidLoad()
         self.setupTabBar()
 
+        
+
     }
 
     func setupTabBar() {
         let items: [TabBarItem] = [.feed, .profile]
-
         self.viewControllers = items.map({ tabBarItem in
             switch tabBarItem {
             case .feed:
                 return UINavigationController(rootViewController: FeedViewController())
             case .profile:
-                return ProfileViewController()
+
+                return UINavigationController(rootViewController: LogInViewController())
             }
         })
 
@@ -58,3 +62,4 @@ class TabBarController: UITabBarController {
     }
 
 }
+
