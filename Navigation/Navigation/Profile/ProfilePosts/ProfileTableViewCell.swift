@@ -1,26 +1,27 @@
 //
-//  ProfileHeaderView.swift
+//  ProfileTableViewCell.swift
 //  Navigation
 //
-//  Created by Evgeny Mastepan on 10.03.2022.
+//  Created by Evgeny Mastepan on 10.04.2022.
 //
 
 import UIKit
 
-class ProfileHeaderView: UIView {
-
-
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
-
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        self.addSubViews()
-    }
+class ProfileTableViewCell: UITableViewCell {
 
     private var statusText: String = ""
     private var statusTag: Bool = false
+    var actionBlock: (() -> Void)? = nil
+
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        self.addSubViews()
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
 
     func addSubViews() {
         self.backgroundColor = .lightGray
@@ -52,7 +53,7 @@ class ProfileHeaderView: UIView {
                                      statusLabelWidthAnchor, statusLabelLeftAnchor, statusLabelBottomAnchor])
     }
 
-    private lazy var showButton: UIButton = {
+    lazy var showButton: UIButton = {
         let showButton = UIButton()
         showButton.setTitle("New status", for: .normal)
         showButton.setTitleColor(.white, for: .normal)
@@ -132,12 +133,16 @@ class ProfileHeaderView: UIView {
 
     private func statusTextChanged (statusTemp: String?){
         if let statusTextTemp = statusTemp {
-        statusText = statusTextTemp 
+        statusText = statusTextTemp
         self.statusLabel.text = statusText
         }
     }
 
-    @objc private func TapShowButton () {
+    @objc func TapShowButton(sender: UIButton) {
+        actionBlock?()
+    }
+
+    func mustShowButton () {
         if !statusTag {
             theStatusTextField()
             showButton.setTitle("Save status", for: .normal)
