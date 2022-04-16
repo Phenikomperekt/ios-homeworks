@@ -1,26 +1,27 @@
 //
-//  ProfileHeaderView.swift
+//  ProfileTableViewCell.swift
 //  Navigation
 //
-//  Created by Evgeny Mastepan on 10.03.2022.
+//  Created by Evgeny Mastepan on 10.04.2022.
 //
 
 import UIKit
 
-class ProfileHeaderView: UIView {
-
-
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
-
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        self.addSubViews()
-    }
+class ProfileTableViewCell: UITableViewCell {
 
     private var statusText: String = ""
     private var statusTag: Bool = false
+    var actionBlock: (() -> Void)? = nil
+
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        self.addSubViews()
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
 
     func addSubViews() {
         self.backgroundColor = .lightGray
@@ -33,10 +34,9 @@ class ProfileHeaderView: UIView {
 
         self.addSubview(showButton)
         let showButtonTopAncor = showButton.topAnchor.constraint(equalTo: avatar.bottomAnchor, constant: 16)
-        let showButtonLeadingAnchor = showButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16)
-        let showButtonTrailingAnchor = showButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16)
-        let showButtonHeightAnchor = showButton.heightAnchor.constraint(equalToConstant: 50)
-
+        let showButtonLeadingAnchor = showButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0)
+        let showButtonTrailingAnchor = showButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0)
+        let showButtonHeightAnchor = showButton.bottomAnchor.constraint(equalTo: self.layoutMarginsGuide.bottomAnchor)
         self.addSubview(nameLabel)
         let nameLabelWidthAnchor = nameLabel.widthAnchor.constraint(equalToConstant: 200)
         let nameLabelLeftAnchor = nameLabel.leftAnchor.constraint(equalTo: avatar.rightAnchor, constant: 16)
@@ -53,7 +53,7 @@ class ProfileHeaderView: UIView {
                                      statusLabelWidthAnchor, statusLabelLeftAnchor, statusLabelBottomAnchor])
     }
 
-    private lazy var showButton: UIButton = {
+    lazy var showButton: UIButton = {
         let showButton = UIButton()
         showButton.setTitle("New status", for: .normal)
         showButton.setTitleColor(.white, for: .normal)
@@ -131,22 +131,22 @@ class ProfileHeaderView: UIView {
     }
 
 
-    private func printStatus() {
-        print(statusLabel.text!) // Отладочная информация, поэтому можем себе позволить насильно раскрывать опциональный тип.
-    }
-
     private func statusTextChanged (statusTemp: String?){
         if let statusTextTemp = statusTemp {
-        statusText = statusTextTemp  // Я знаю, что дополнительная переменная не нужна, но в задании она есть. )
+        statusText = statusTextTemp
         self.statusLabel.text = statusText
         }
     }
 
-    @objc private func TapShowButton () {
+    @objc func TapShowButton(sender: UIButton) {
+        actionBlock?()
+    }
+
+    func mustShowButton () {
         if !statusTag {
             theStatusTextField()
             showButton.setTitle("Save status", for: .normal)
-            printStatus()
+
             statusTag.toggle()
 
         } else if statusTag {
