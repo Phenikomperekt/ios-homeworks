@@ -9,6 +9,8 @@ import UIKit
 
 class LogInViewController: UIViewController {
 
+    private let tapGestureRecognizer = UITapGestureRecognizer()
+
     private lazy var logInScrollView: UIScrollView = {
         let logInScrollView = UIScrollView()
         logInScrollView.translatesAutoresizingMaskIntoConstraints = false
@@ -21,6 +23,16 @@ class LogInViewController: UIViewController {
         return logInView
     }()
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.view.addSubview(logInScrollView)
+        self.logInScrollView.addSubview(logInView)
+        setupConstraints()
+        addLogInElements()
+        self.setupGesture()
+
+    }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.tabBarController?.tabBar.isHidden = true
@@ -32,30 +44,20 @@ class LogInViewController: UIViewController {
                                name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.view.addSubview(logInScrollView)
-        self.logInScrollView.addSubview(logInView)
-        self.view.addSubview(logInView)
-        setupConstraints()
-        addLogInElements()
-
-
-
-    }
-
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         let noteCenter = NotificationCenter.default
         noteCenter.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         noteCenter.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
-    
+
     private func setupConstraints() {
         let topScrollView = logInScrollView.topAnchor.constraint(equalTo: self.view.topAnchor)
         let bottomScrollView = logInScrollView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
         let leftScrollView = logInScrollView.leftAnchor.constraint(equalTo: self.view.leftAnchor)
         let rightScrollView = logInScrollView.rightAnchor.constraint(equalTo: self.view.rightAnchor)
+        let widthScrollView = logInScrollView.widthAnchor.constraint(equalTo: self.view.widthAnchor)
+        let heightScrollView = logInScrollView.heightAnchor.constraint(equalTo: self.view.heightAnchor)
 
         let topLogInView = logInView.topAnchor.constraint(equalTo: self.logInScrollView.topAnchor)
         let bottomLogInView = logInView.bottomAnchor.constraint(equalTo: self.logInScrollView.bottomAnchor)
@@ -63,33 +65,14 @@ class LogInViewController: UIViewController {
         let rightLogInView = logInView.rightAnchor.constraint(equalTo: self.logInScrollView.layoutMarginsGuide.rightAnchor)
 
         let widthLogInView = logInView.widthAnchor.constraint(equalTo: self.logInScrollView.widthAnchor)
-        let heightLogInView = logInView.heightAnchor.constraint(equalTo: self.view.heightAnchor)
+        let heightLogInView = logInView.heightAnchor.constraint(equalTo: self.logInScrollView.heightAnchor)
 
         NSLayoutConstraint.activate([
-                                     topScrollView, bottomScrollView, leftScrollView, rightScrollView,
+                                     topScrollView, bottomScrollView, leftScrollView, rightScrollView, widthScrollView, heightScrollView,
                                      topLogInView, bottomLogInView, rightLogInView, leftLogInView, widthLogInView, heightLogInView
                                     ])
     }
 
-    @objc private func kbWillShow(notification: NSNotification) {
-        if let kbdSize =
-            (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-            print ("Key is ON from: ", logInScrollView.contentInset.bottom)
-            self.logInScrollView.contentInset.bottom = kbdSize.height + 20
-            self.logInScrollView.verticalScrollIndicatorInsets =
-                                        UIEdgeInsets(top: 0, left: 0, bottom: kbdSize.height, right: 0)
-            print ("Key height is ", logInScrollView.contentInset.bottom)
-           
-        }
-
-    }
-
-
-    @objc func kbWillHide() {
-        logInScrollView.contentInset.bottom = .zero
-        logInScrollView.verticalScrollIndicatorInsets = .zero
-        print ("Key height off is ", logInScrollView.contentInset.bottom)
-    }
 
     func addLogInElements() {
         logInView.backgroundColor = .white
@@ -205,10 +188,38 @@ class LogInViewController: UIViewController {
         return logInButton
     }()
 
-//    func tapGesture() {
-//        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(endEditing))
-//        self.logInView.addGestureRecognizer(tapGesture)
-//    }
+
+    private func setupGesture() {
+        self.tapGestureRecognizer.addTarget(self, action: #selector(self.forcedHideKeyboard))
+        self.logInView.addGestureRecognizer(self.tapGestureRecognizer)
+    }
+
+    @objc private func kbWillShow(notification: NSNotification) {
+        if let kbdSize =
+            (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            self.logInScrollView.setContentOffset(CGPoint(x:0, y: kbdSize.height/2), animated: true)
+//            self.logInScrollView.contentInset.bottom = kbdSize.height + 20
+            self.logInScrollView.verticalScrollIndicatorInsets =
+                                        UIEdgeInsets(top: 0, left: 0, bottom: kbdSize.height, right: 0)
+
+
+        }
+
+    }
+
+    @objc func kbWillHide() {
+        self.logInScrollView.setContentOffset(CGPoint(x:0, y:0), animated: true)
+//        logInScrollView.contentInset.bottom = .zero
+        logInScrollView.verticalScrollIndicatorInsets = .zero
+
+    }
+
+
+    @objc private func forcedHideKeyboard() {
+        self.logInView.endEditing(true)
+        print ("Key ", tapGestureRecognizer)
+        self.logInScrollView.setContentOffset(CGPoint(x:0, y:0), animated: true)
+    }
 
     @objc func logInButtonTouch() {
 
